@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEXORA – Új generáció</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080812;
+    color: white;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 9%;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    color: #a78bfa;
+    letter-spacing: 2px;
+}
+
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #a78bfa;
+}
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+}
+
+.glow {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: #702cff;
+    filter: blur(180px);
+    opacity: .35;
+    z-index: -1;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 8vw, 85px);
+    font-weight: 800;
+    line-height: 1.1;
+    max-width: 950px;
+}
+
+.gradient {
+    background: linear-gradient(90deg, #a78bfa, #38bdf8);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero p {
+    color: #aaa;
+    font-size: 18px;
+    margin: 25px 0 35px;
+    max-width: 600px;
+    line-height: 1.7;
+}
+
+.btn {
+    display: inline-block;
+    padding: 16px 35px;
+    background: linear-gradient(90deg, #7c3aed, #2563eb);
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+    box-shadow: 0 0 25px #713cff55;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 40px #713cff99;
+}
+
+.features {
+    padding: 80px 9%;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 38px;
+    margin-bottom: 50px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: #121222;
+    border: 1px solid #292943;
+    padding: 40px 25px;
+    border-radius: 18px;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: #9165ff;
+    box-shadow: 0 10px 40px #713cff22;
+}
+
+.card .icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.card p {
+    color: #999;
+    line-height: 1.6;
+}
+
+.cta {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(180deg, #080812, #17102e);
+}
+
+.cta h2 {
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+
+footer {
+    padding: 25px;
+    text-align: center;
+    color: #777;
+    border-top: 1px solid #222;
+}
+
+@media(max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav a {
+        margin: 0 8px;
+        font-size: 14px;
+    }
+
+    .features h2, .cta h2 {
+        font-size: 30px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">NEXORA.</div>
+    <nav>
+        <a href="#home">Kezdőlap</a>
+        <a href="#services">Szolgáltatások</a>
+        <a href="#contact">Kapcsolat</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div class="glow"></div>
+
+    <h1>
+        A jövő most<br>
+        <span class="gradient">kezdődik.</span>
+    </h1>
+
+    <p>
+        Fedezd fel az innováció és a kreativitás világát.
+        Alkoss valami különlegeset, és lépj a következő szintre!
+    </p>
+
+    <a href="#services" class="btn">Fedezd fel →</a>
+</section>
+
+<section class="features" id="services">
+    <h2>Mit kínálunk?</h2>
+
+    <div class="cards">
+        <div class="card">
+            <div class="icon">⚡</div>
+            <h3>Sebesség</h3>
+            <p>Modern megoldások, gyors és hatékony működés.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🚀</div>
+            <h3>Innováció</h3>
+            <p>Új ötletek és kreatív technológiai megoldások.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">💎</div>
+            <h3>Minőség</h3>
+            <p>Prémium megjelenés és kiváló felhasználói élmény.</p>
+        </div>
+    </div>
+</section>
+
+<section class="cta" id="contact">
+    <h2>Készen állsz a <span class="gradient">jövőre?</span></h2>
+    <a href="mailto:info@example.com" class="btn">
+        Lépj kapcsolatba velünk
+    </a>
+</section>
+
+<footer>
+    © 2026 NEXORA. Minden jog fenntartva.
+</footer>
+
+</body>
+</html>
